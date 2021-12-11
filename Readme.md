@@ -1,25 +1,25 @@
 TELEGRAM WEBHOOK GATEWAY
 ===
-## Development:
-> make up-dev
-> cd gateway
-> make install-composer
 
-### TODO:
-- [ ] docker-composer for local development
-  - [ ] php
-  - [ ] nginx
-- [ ] Terraform (digital ocean)
-- [ ] Ansible (deploy nginx + php-fpm)
-- [ ] Prod mode
+[![Stay in touch][ico-telegram]][@igorkpl]
+
+## Prepare environment variables
+`cp .env .env.local`
+
+And change default values to yours.
 
 
-Push
-docker tag botonariousdsdsdm-gateway lov3catch/botonarioum-gateway:v0.0.1
-docker push lov3catch/botonarioum-gateway:v0.0.1
+## Run development server:
+`make dev`
 
-cp .env .env.local
+Open [127.0.0.1:8080](127.0.0.1:8080) in your browser
 
+## Production (in process)
+- Build image: `make build`
+- Tag new version: `docker tag botonariousdsdsdm-gateway lov3catch/botonarioum-gateway:v0.0.1`
+- Push new version: `docker push lov3catch/botonarioum-gateway:v0.0.1`
 
-Contribute:
---
+## Contribute
+Before commit/push - ensure is everything are okay with code.
+> make analyse      # Run phpstan analyse
+
