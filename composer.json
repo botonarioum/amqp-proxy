@@ -1,0 +1,19 @@
+{
+    "autoload": {
+        "psr-4": {
+            "App\\": "app"
+        }
+    },
+    "require": {
+        "symfony/http-kernel": "^6.0",
+        "doctrine/annotations": "^1.13",
+        "symfony/routing": "^6.0",
+        "symfony/dotenv": "^6.0",
+        "enqueue/amqp-bunny": "^0.10.9"
+    }
+    ,
+    "require-dev": {
+        "roave/security-advisories": "dev-latest",
+        "phpstan/phpstan": "^1.2"
+    }
+}

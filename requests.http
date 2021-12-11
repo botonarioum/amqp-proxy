@@ -1,0 +1,16 @@
+GET http://127.0.0.1:8080/moderator
+Accept: application/json
+
+###
+POST http://127.0.0.1:8080/moderator
+Content-Type: application/json
+
+{"key-a":  "value-a", "key-b":  "value-b"}
+
+###
+POST https://api.telegram.org/bot{{token}}/setWebhook?url={{url}}
+
+###
+GET https://api.telegram.org/bot{{token}}/getWebhookInfo
+
+###
