@@ -1,8 +1,8 @@
-GET http://127.0.0.1:8080/moderator
+GET http://gateway.com/moderator
 Accept: application/json
 
 ###
-POST http://127.0.0.1:8080/moderator
+POST http://gateway.com/moderator
 Content-Type: application/json
 
 {"key-a":  "value-a", "key-b":  "value-b"}

@@ -2,15 +2,14 @@ TELEGRAM WEBHOOK GATEWAY
 ===
 
 ## Prepare environment variables
-`cp .env .env.local`
 
-And change default values to yours.
-
+- Add domain to hosts. `echo '127.0.0.1    gateway.com' >> /etc/hosts`
+- Create env file: `cp .env .env.local`. And change default values to yours.
 
 ## Run development server:
 `make dev`
 
-Open [127.0.0.1:8080](127.0.0.1:8080) in your browser
+Open [gateway.com](gateway.com) in your browser
 
 ## Production (in process)
 - Build image: `make build`
