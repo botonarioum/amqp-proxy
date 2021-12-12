@@ -2,20 +2,24 @@ version: "3.9"
 services:
   nginx:
     image: nginx:1.21.4-alpine
-    restart: always
+    restart: unless-stopped
+    volumes:
+      - ./etc/infrastructure/nginx/nginx.conf:/etc/nginx/conf.d/gateway.com.conf
+      - .:/var/www
     ports:
       - "80:80"
-      - "443:443"
+    depends_on:
+      - php
     expose:
       - 80
   php:
     build: .
     ports:
-      - "8080:8080"
+      - "9000:9000"
     expose:
-      - 8080
+      - 9000
     restart: always
     volumes:
-      - .:/code
-    depends_on:
-      - nginx
+      - .:/var/www
+    env_file:
+      - .env

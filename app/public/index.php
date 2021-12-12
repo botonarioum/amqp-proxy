@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App;
 
-require_once __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__ . '/../../vendor/autoload.php';
 
 
 use Symfony\Component\Dotenv\Dotenv;
@@ -20,13 +20,14 @@ use Symfony\Component\Routing\RequestContext;
 use Symfony\Component\Routing\Route;
 use Symfony\Component\Routing\RouteCollection;
 
-if (is_file(__DIR__ . '/.env.local')) {
+if (is_file(__DIR__ . '/.env')) {
     $env = new Dotenv();
-    $env->load(__DIR__ . '/.env.local');
+    $env->load(__DIR__ . '/.env');
 }
 
 $routes = new RouteCollection();
-$routes->add('index', new Route('/{botName}', ['_controller' => new WebhookController()]));
+$routes->add('index', new Route('/', ['_controller' => new IndexController()]));
+$routes->add('webhook', new Route('/{botName}', ['_controller' => new WebhookController()]));
 
 $matcher = new UrlMatcher($routes, new RequestContext());
 

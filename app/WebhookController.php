@@ -7,7 +7,7 @@ namespace App;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 
-class WebhookController
+final class WebhookController
 {
     public function __invoke(Request $request, string $botName): JsonResponse
     {

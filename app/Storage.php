@@ -6,7 +6,7 @@ namespace App;
 
 use Enqueue\AmqpBunny\AmqpConnectionFactory;
 
-class Storage
+final class Storage
 {
     private \Interop\Queue\Context|\Enqueue\AmqpBunny\AmqpContext $context;
 
