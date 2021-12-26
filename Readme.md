@@ -19,8 +19,15 @@ Open [amqp-proxy.com](amqp-proxy.com) in your browser
 - Tag new version: `docker tag botonariom-amqp-proxy lov3catch/botonariom-amqp-proxy:v0.0.1`
 - Push new version: `docker push lov3catch/botonariom-amqp-proxy:v0.0.1`
 
+## Infrastructure
+Run `make infrastructure` for create droplet with load balancer on [digital-ocean](https://m.do.co/c/06461e21e1d1).
+
+Edit `variables.tf` if need.
+
 ## Contribute
 Before commit/push - ensure is everything are okay with code. `make analyse` run PHPStan analyse.
+
+[![DigitalOcean Referral Badge](https://web-platforms.sfo2.cdn.digitaloceanspaces.com/WWW/Badge%201.svg)](https://www.digitalocean.com/?refcode=06461e21e1d1&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge)
 
 ## Stay in touch
 [Telegram](https://t.me/igorkpl)
