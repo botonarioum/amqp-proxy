@@ -6,3 +6,7 @@ up:
 
 analyse:
 	php vendor/bin/phpstan.phar analyse app/
+
+infrastructure:
+	terraform init
+	terraform apply
